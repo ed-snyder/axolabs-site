@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axo Labs | Latin American Advisory & Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a1a;
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .logo-block {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0;
+            margin-bottom: 12px;
+        }
+        .logo-img-wrap {
+            width: 192px;
+            height: 192px;
+            position: relative;
+            left: -58px;
+        }
+        .logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .logo-text {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #000000;
+            margin-top: -16px;
+        }
+        .tag {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #666666;
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            line-height: 1.1;
+            color: #000000;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+        .subtitle {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #444444;
+            max-width: 600px;
+            margin-bottom: 48px;
+        }
+        .cta-row {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .cta-primary {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #000000;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .cta-primary:hover { background: #222222; }
+        .cta-secondary {
+            font-size: 15px;
+            color: #444444;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .cta-secondary:hover { color: #000000; }
+        .divider { width: 100%; height: 1px; background: #e0e0e0; }
+        .services {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #3fb8a9;
+            margin-bottom: 40px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px 64px;
+        }
+        .service-block h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        .service-block p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #666666;
+        }
+        .focus-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 80px 40px;
+        }
+        .focus-card {
+            background: #000000;
+            border-radius: 16px;
+            padding: 56px 48px;
+            color: #fff;
+            border-left: 4px solid #3fb8a9;
+        }
+        .focus-card .section-label { color: #3fb8a9; }
+        .focus-card h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+        .focus-card p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #aaaaaa;
+            max-width: 620px;
+            margin-bottom: 32px;
+        }
+        .focus-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px 48px;
+            list-style: none;
+            margin-bottom: 40px;
+        }
+        .focus-list li {
+            font-size: 15px;
+            color: #cccccc;
+            padding-left: 20px;
+            position: relative;
+        }
+        .focus-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3fb8a9;
+        }
+        .cta-light {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #fff;
+            color: #000000;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .cta-light:hover { background: #f0f0f0; }
+        footer {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 48px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-brand { font-size: 15px; font-weight: 600; color: #000000; }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { font-size: 14px; color: #666666; text-decoration: none; }
+        .footer-links a:hover { color: #000000; }
+        @media (max-width: 640px) {
+            .hero, .services, .focus-section { padding: 60px 24px; }
+            .service-grid { grid-template-columns: 1fr; gap: 36px; }
+            .focus-card { padding: 40px 28px; }
+            .focus-list { grid-template-columns: 1fr; }
+            footer { padding: 40px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="logo-block">
+            <div class="logo-img-wrap">
+                <img src="assets/images/logo.png" alt="Axo Labs" class="logo">
+            </div>
+            <span class="logo-text">Axo Labs</span>
+        </div>
+        <p class="tag">Latin American Advisory & Intelligence</p>
+        <h1>We help you get things done in LATAM.</h1>
+        <p class="subtitle">Advisory, deal facilitation, and on-the-ground intelligence for investors, companies, and individuals entering Venezuela's reopening economy.</p>
+        <div class="cta-row">
+            <a href="mailto:eric@axolabs.io" class="cta-primary">Get in touch</a>
+            <a href="#services" class="cta-secondary">Learn more &#8595;</a>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <section class="services" id="services">
+        <p class="section-label">What We Do</p>
+        <div class="service-grid">
+            <div class="service-block">
+                <h3>Investment Advisory</h3>
+                <p>Market intelligence, deal sourcing, and partner introductions for foreign investors entering Venezuelan real estate, tourism, hospitality, and logistics.</p>
+            </div>
+            <div class="service-block">
+                <h3>Relocation & Residency</h3>
+                <p>End-to-end support for individuals and families relocating to Venezuela. Visa guidance, housing, local orientation, and building a life on the ground.</p>
+            </div>
+            <div class="service-block">
+                <h3>Business Entry</h3>
+                <p>Company formation, legal structuring, local partner vetting, and navigating the regulatory landscape for businesses looking to operate in Venezuela.</p>
+            </div>
+            <div class="service-block">
+                <h3>Market Intelligence</h3>
+                <p>Real-time monitoring, sector analysis, and ground-truth reporting on Venezuelan economic developments. Know what is happening before everyone else.</p>
+            </div>
+        </div>
+    </section>
+    <section class="focus-section">
+        <div class="focus-card">
+            <p class="section-label">Current Focus: Venezuela</p>
+            <h2>The largest economic reopening in Latin America.</h2>
+            <p>Venezuela is transitioning and capital is beginning to flow. The window for early movers is open. We are on the ground to assist businesses take advantage of the largest economic opportunity in Latin American history. We connect foreign investors and operators with the right people, the right sectors, and the right deals.</p>
+            <ul class="focus-list">
+                <li>Real Estate & Development</li>
+                <li>Tourism & Hospitality</li>
+                <li>Logistics & Supply Chain</li>
+                <li>Residency & Immigration</li>
+                <li>Oil & Gas Services</li>
+                <li>Construction</li>
+            </ul>
+            <a href="mailto:eric@axolabs.io" class="cta-light">Start a conversation</a>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <footer>
+        <span class="footer-brand">Axo Labs</span>
+        <div class="footer-links">
+            <a href="mailto:eric@axolabs.io">Contact</a>
+        </div>
+    </footer>
+</body>
+</html>
